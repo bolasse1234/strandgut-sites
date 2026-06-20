@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>STRANDGUT - zwei Entwürfe</title>
+    <style>
+      :root { color-scheme: light; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        background: #f6f3ea;
+        color: #102a27;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 32px;
+      }
+      header { text-align: center; max-width: 36rem; }
+      h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: 0.04em; }
+      header p { margin-top: 12px; color: #436b67; line-height: 1.6; }
+      .grid { display: grid; gap: 18px; width: 100%; max-width: 44rem; grid-template-columns: 1fr; }
+      @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+      a.card {
+        display: block; text-decoration: none; color: inherit;
+        background: #fff; border: 1px solid #e4ddcf; border-radius: 18px;
+        padding: 26px; transition: transform .15s ease, box-shadow .15s ease;
+      }
+      a.card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(16,42,39,.12); }
+      .tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #d9603a; }
+      .card h2 { margin-top: 10px; font-size: 1.4rem; }
+      .card p { margin-top: 8px; color: #436b67; line-height: 1.55; font-size: .95rem; }
+      .go { margin-top: 16px; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #d9603a; }
+      footer { color: #7d938f; font-size: .85rem; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>STRANDGUT</h1>
+      <p>Zwei Entwürfe für dieselbe Beachbar. Schau dir beide auf dem Handy an und
+        sag mir, welche Richtung dir besser gefällt.</p>
+    </header>
+
+    <main class="grid">
+      <a class="card" href="./info/">
+        <span class="tag">Variante A · Info-first</span>
+        <h2>Klar & praktisch</h2>
+        <p>Öffnungszeiten gut sichtbar, Speisekarte mit PDF, Anfahrt, Reservierung.
+          Der normale Restaurant-Look.</p>
+        <span class="go">Ansehen &rarr;</span>
+      </a>
+      <a class="card" href="./editorial/">
+        <span class="tag">Variante B · Editorial</span>
+        <h2>Dunkel & cinematic</h2>
+        <p>Großes Kino mit Animationen und horizontaler Menü-Galerie. Auffällig,
+          eher fürs Auge.</p>
+        <span class="go">Ansehen &rarr;</span>
+      </a>
+    </main>
+
+    <footer>Demo-Seiten · STRANDGUT ist ein fiktives Lokal</footer>
+  </body>
+</html>
